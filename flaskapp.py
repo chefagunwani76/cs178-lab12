@@ -39,12 +39,16 @@ def analyze(word):
     for letter in lower_word:
         if letter in "aeiou":
             num_vowels +=1
+    reversed_word = ''
+    for letter in word:
+        reversed_word = letter + reversed_word
 
     # render_template passes all variables into analyze.html
     return render_template('analyze.html',
                            word=word,
                            length=length,
-                           num_vowels=num_vowels)
+                           num_vowels=num_vowels,
+                           reversed_word=reversed_word)
 
 
 
