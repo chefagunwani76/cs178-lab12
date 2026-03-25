@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-# Lab 12 Chidera Winifred Agu
+# Lab 12 giChidera Winifred Agu
 # Flask needs to know the name of this file to find templates and static files
 app = Flask(__name__)
 
@@ -28,7 +28,11 @@ def hello(name):
 #  YOUR ROUTES GO BELOW THIS LINE
 #  Each exercise asks you to add a new @app.route here
 # ============================================================
-
+@app.route('/analyze/<word>')
+def analyze(word):
+    length = len(word)
+    # Example: /analyze/Drake  →  should display: 5
+    return str(length)
 
 
 
