@@ -42,7 +42,7 @@ def analyze(word):
     reversed_word = ''
     for letter in lower_word:
         reversed_word = letter + reversed_word
-    reversed_word = reversed_word[0].upper()
+    reversed_word = reversed_word[0].upper() + reversed_word[0:]
 
     # render_template passes all variables into analyze.html
     return render_template('analyze.html',
