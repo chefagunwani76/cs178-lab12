@@ -37,7 +37,7 @@ def analyze(word):
     num_vowels = 0
     lower_word = word.lower()
     for letter in lower_word:
-        if letter == "a" or "e" or "i" or "o" or "u":
+        if letter in "aeiou":
             num_vowels +=1
 
     # render_template passes all variables into analyze.html
